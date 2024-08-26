@@ -36,7 +36,7 @@ Once `textAnim.js` is installed, you can use the following classes on any HTML t
 
 ## Documentation
 
-For detailed usage examples and to see all available animations in action, check out the [demo page](./demo.html).
+For detailed usage examples and to see all available animations in action, check out the [demo page](./textanim_demo.html).
 
 ## Contributing
 
