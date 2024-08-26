@@ -4,6 +4,8 @@
 
 `textAnim.js` is a minimalistic JavaScript library designed to add elegant, fluid text animations to your website with ease. With just 1kb of vanilla JS and 5kb of CSS, you can bring life to your text elements using a simple, class-based approach.
 
+![Logo de textAnim.js](textanim.gif)
+
 ## Why It's Cool
 
 - **31** elegant and fluid text animations, ready to run on any website.
