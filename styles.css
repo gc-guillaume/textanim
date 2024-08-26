@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Inter", sans-serif;
+    font-size: 40px;
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color:#0d060f;
+}
+* {
+                box-sizing: border-box;
+}
+
+h2 {
+    text-align: center; /* Centrer le texte pour une meilleure présentation */
+    font-size: clamp(3rem, 5vw, 8.1rem); /* Taille de police responsive */
+    margin: .5em 0; /* Espace autour des titres */
+    line-height: 1.2; /* Hauteur de ligne pour améliorer la lisibilité */
+    font-weight: 400;
+    z-index: 1;
+}
+span.number {
+    position: absolute;
+    bottom: 0px;
+    right: 30px;
+    font-size: 20vw;
+    opacity: .033;
+    z-index: 0;
+}
+.demo > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 200px);
+    padding: 0 1em;
+    flex-direction: column;
+    gap: 0;
+    background: #f0f0f0;
+    border-bottom: 1px solid rgba(0,0,0,.25);
+    position: relative;
+    box-sizing: border-box;
+}
+.demo > div > div {
+    display: flex;
+    gap: 8px;
+    flex-direction: row;
+    position: absolute;
+    top: 1em;
+}
+.badge {
+    font-family: monospace;
+    font-size: 14px;
+    text-align: center;
+    padding: 4px 12px;
+    border-radius: 4px;
+    cursor: default;
+    min-width: 32px;
+    background: rgba(0,0,0,.07);
+    transition: all .4s cubic-bezier(.75,.1,.1,.75);
+        height: 32px !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+            border-radius: 50px;
+
+}
+.badge:hover {
+    background: rgba(0,0,0,.0);
+}
+span.copied {
+    background:#17B169 !important;
+    color:white;
+    pointer-events: none;
+    border-color:#17B169;
+}
+.redo {
+    background: url(replay.svg) no-repeat center center / 50% rgba(0,0,0,.07);
+    border-radius: 50px;
+    cursor: pointer;
+}
+.redo:hover {
+    background: url(replay.svg) no-repeat center center / 50% transparent;
+    transform:rotate(-360deg);
+    
+}
+@media all and (max-width:768px) {
+    .badge {
+        font-size: 11px;
+        padding: 18px;
+        height: 32px !important;
+    }
+    .demo > div {
+        gap: .5em;
+    }
+}

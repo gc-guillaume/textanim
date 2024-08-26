@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang=en>
+   <head>
+      <meta charset=UTF-8>
+      <meta name=viewport content="width=device-width,initial-scale=1">
+      <title>textAnim.js - Dumb, lightweight & class based text animations.</title>
+      <link rel=stylesheet href=animations.css>
+      <link rel=stylesheet href=style.css>
+   </head>
+   <body>
+     <header>
+
+      <div>
+        <div>
+         <h1 class="txt-anime-color-shift txt-split txt-delay-200">textAnim.js</h1>   
+        </div>
+        <nav>
+           <ul>
+            <li><a href="#why">Why it's cool</a></li>
+              <li><a href="#how">How to use</a></li>    
+              <li>Doc</li>
+              <li>Contact</li>
+           </ul>
+        </nav>
+     </div>
+     </header>
+     <section>
+      <h2 class="txt-anime-slide-up txt-delay-200">
+         Tired of old cheesy text animations? <i style="color:blue">Same.</i>
+      </h2>
+      <p class="txt-anime-clip txt-delay-700">Discover <i>textAnim.js</i>, an elegant plug-and-play, class based and lightweight library: <u>1ko js, 5ko css.</u></p>
+      <div style="margin-bottom: 32px;display: flex;flex-wrap: wrap;gap:16px">
+         <button class="primary">Copy and include CDNs</button>
+         <button class="secondary">Download zip</button>
+      </div>
+     </section>
+     
+     <section class="light" id="why">
+      <div class="parentbloc">
+      <div class="bloc">
+         <h2>31</h2>
+         <p class="txt-anime-color-shift txt-delay-200 txt-split">elegant and fluid text animations, ready to run on any website.</p>
+         <video autoplay="" playsinline="" muted="" loop=""><source src="https://demos.nectarblocks.com/taskhorizon/wp-content/uploads/sites/3/2024/04/abstract-waves.mp4" type="video/mp4"></video>
+      </div>
+      <div class="blocwrap">
+         <div class="bloc">
+            <h2>3</h2>
+            <p class="txt-anime-color-shift txt-delay-250 txt-split">classes to learn - split, repeat and delay. Yep, that's a few.</p>
+         </div>
+         <div class="childbloc">
+         <div class="bloc">
+            <h2>1<small>ko</small></h2>
+            <p class="txt-anime-color-shift txt-delay-300 txt-split">of Vanilla Js.</p>
+         </div>
+         <div class="bloc">
+            <h2>5<small>ko</small></h2>
+            <p class="txt-anime-color-shift txt-delay-350 txt-split">of CSS. Fast as heck!</p>
+         </div>
+      </div>
+      </div>
+   </div>
+   <div style="padding-top:48px">
+   <h2 class="txt-anime-diagonal-top-right txt-delay-400">
+      Animate word by word...
+   </h2>
+   <h2 class="txt-anime-clip txt-right txt-delay-400 txt-split" style="color:blue">...or letter by letter.
+   </h2>
+
+   <div class="parentbloc middle" id="how" style="padding-bottom:64px;border-bottom: 1px solid;">
+         <div class="bloc">
+            <div>
+            <img src="cdn.svg"/>
+            <h3 class="txt-split">Use a CDN</h3>
+            <p><small>recommanded</small></p>
+         </div>
+            <p class="txt-anime-skew txt-delay-200">Easiest way to dive in. Copy and paste two lines of code into your file, add your first class to your text and see the magic happen.</p>
+         <button class="primary small">Copy and include</button>
+         <p class="txt-anime-skew txt-delay-200">Or copy manually:</p>
+         <span class="pre">
+    <span>&lt;link rel=&quot;stylesheet&quot; href=&quot;animations.css&quot;&gt;</span>
+    <span>&lt;script src=&quot;animations.min.js&quot;&gt;&lt;/script&gt;</span>
+  </span>
+         </div>
+
+         <span class="divider"></span>
+         <div class="bloc">
+            <div><img src="zip.svg"/>
+            <h3>Download a zip</h3>
+         </div>
+            <p class="txt-anime-skew txt-delay-400">Get the source code and play with the demo file included. Create your own css animations or modify the functions at your convenience.</p>
+            <button class="secondary small">Download</button>
+
+         </div>
+   </div>
+
+</div>
+
+<div id="doc" style="padding-top:64px">
+   <h2 class="txt-anime-slide-up">In details</h2>
+   <p class="txt-anime-skew">Once <i style="color:blue">textAnime.js</i> is installed on your document, you can pass the following classes to any html text element. All four classes can be accumulated in the same element.</p>
+   <p class="txt-anime-slide-up"></p>
+   <table class="responsive-table">
+    <thead>
+      <tr>
+        <th style="width: 20%;">Class</th>
+        <th style="width: 15%;">Requirement</th>
+        <th style="width: 30%;">Description</th>
+        <th style="width: 35%;">Code</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-label="Class">txt-anime-<i>{animation}</i></td>
+        <td data-label="Requirement">Required</td>
+        <td data-label="Description">This element triggers the scroll animation. You can choose from 31 different animations in the demo. <a target="_blank" href="./demo.html"><u>Help yourself!</u></td>
+        <td data-label="Code"><i>&lt;p class=&quot;txt-anime-slide-up&quot;&gt;Exemple&lt;/p&gt;</i></td>
+      </tr>
+      <tr>
+        <td data-label="Class">txt-delay-<i>{value in milliseconds}</i></td>
+        <td data-label="Requirement">Optional</td>
+        <td data-label="Description">Adds an animation delay in miliseconds. Useful when you want to trigger animations one after the other!</td>
+        <td data-label="Code"><i>&lt;p class=&quot;txt-anime-slide-up txt-delay-400&quot;&gt;This text will appear after 400ms&lt;/p&gt;</i></td>
+      </tr>
+      <tr>
+        <td data-label="Class">txt-split</td>
+        <td data-label="Requirement">Optional</td>
+        <td data-label="Description">Divides the text animation letter by letter rather than word by word, wrapping each word in a span so there's no issue with line breaks.</td>
+        <td data-label="Code"><i>&lt;p class=&quot;txt-anime-slide-up txt-split&quot;&gt;This text will appear letter after letter!&lt;/p&gt;</i></td>
+      </tr>
+      <tr>
+        <td data-label="Class">txt-repeat</td>
+        <td data-label="Requirement">Optional</td>
+        <td data-label="Description">By default, animations are triggered only once. This option repeats the animation each time the text is visible in the viewport.</td>
+        <td data-label="Code"><i>&lt;p class=&quot;txt-anime-slide-up txt-repeat&quot;&gt;This text animation will be triggered each time I scroll back on it.&lt;/p&gt;</i></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+      <script src=animations.min.js></script>
+      <script src=class.js></script>
+      <script src=https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js></script>
+      <script>SmoothScroll({stepSize:120,animationTime:450,accelerationDelta:10,accelerationMax:3,pulseAlgorithm:!0,pulseScale:7,pulseNormalize:1,touchpadSupport:!0,fixedBackground:!0})</script>
+      <script>
+         document.addEventListener("DOMContentLoaded", function() {
+  // Sélectionner toutes les cellules de la table avec data-label="Code"
+  const codeCells = document.querySelectorAll('td[data-label="Code"]');
+
+  codeCells.forEach(cell => {
+    // Créer un élément span avec la classe "copy"
+    const span = document.createElement('span');
+    span.classList.add('copy');
+    span.innerText = ' Copy';
+
+    // Insérer le span dans la cellule
+    cell.appendChild(span);
+
+    // Ajouter un événement de clic pour copier le contenu HTML formaté
+    span.addEventListener('click', function() {
+      const htmlContent = cell.querySelector('i').textContent; // Récupère le contenu du <i>
+
+      // Copier le contenu dans le presse-papiers
+      navigator.clipboard.writeText(htmlContent).then(() => {
+        // Changer la classe à "copied"
+        span.classList.remove('copy');
+        span.classList.add('copied');
+        span.innerText = ' Copied!';
+
+        // Remettre la classe à "copy" après 1 seconde
+        setTimeout(() => {
+          span.classList.remove('copied');
+          span.classList.add('copy');
+          span.innerText = ' Copy';
+        }, 1000);
+      }).catch(err => {
+        console.error('Erreur lors de la copie : ', err);
+      });
+    });
+  });
+
+  // Sélectionner tous les éléments avec la classe "pre"
+  const preElements = document.querySelectorAll('.pre');
+
+  preElements.forEach(preElement => {
+    // Créer un élément span avec la classe "copy"
+    const span = document.createElement('span');
+    span.classList.add('copy');
+    span.innerText = ' Copy';
+
+    // Insérer le span après le dernier enfant de .pre
+    preElement.appendChild(span);
+
+    // Ajouter un événement de clic pour copier le contenu de chaque span à l'intérieur de .pre
+    span.addEventListener('click', function() {
+      let combinedContent = '';
+
+      // Récupérer le contenu textuel de chaque enfant <span> à l'intérieur de .pre
+      preElement.querySelectorAll('span:not(.copy)').forEach(innerSpan => {
+        combinedContent += innerSpan.textContent + '\n';
+      });
+
+      // Copier le contenu combiné dans le presse-papiers
+      navigator.clipboard.writeText(combinedContent.trim()).then(() => {
+        // Changer la classe à "copied"
+        span.classList.remove('copy');
+        span.classList.add('copied');
+        span.innerText = ' Copied!';
+
+        // Remettre la classe à "copy" après 1 seconde
+        setTimeout(() => {
+          span.classList.remove('copied');
+          span.classList.add('copy');
+          span.innerText = ' Copy';
+        }, 1000);
+      }).catch(err => {
+        console.error('Erreur lors de la copie : ', err);
+      });
+    });
+  });
+});
+
+
+      </script>
+   </body>
+</html>

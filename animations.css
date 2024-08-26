@@ -1,0 +1,365 @@
+/** animations **/
+
+[class^="txt-anime"] {
+    display: flex;
+    column-gap: .25em;
+    row-gap: 0;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    transition: all .45s cubic-bezier(.75,0,0,.75);
+}
+.txt-center {
+    justify-content: center;
+}
+.txt-right {
+    justify-content: flex-end;
+}
+/* Basic setup for hidden overflow and transitions */
+[class^="txt-anime-"] span {
+    opacity: 0;
+    overflow: hidden;
+    transform-origin: center;
+    transition: all .45s cubic-bezier(.75,0,0,.75);
+}
+
+/* Animation 1: Fade in and slide up */
+.txt-anime-slide-up span {
+    transform: translateY(30px);
+}
+
+.txt-anime-slide-up.txt-anime-visible span {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animation 2: Fade in and slide down */
+.txt-anime-slide-down span {
+    transform: translateY(-30px);
+}
+
+.txt-anime-slide-down.txt-anime-visible span {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animation 3: Fade in and slide left */
+.txt-anime-slide-left span {
+    transform: translateX(30px);
+}
+
+.txt-anime-slide-left.txt-anime-visible span {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Animation 4: Fade in and slide right */
+.txt-anime-slide-right span {
+    transform: translateX(-30px);
+}
+
+.txt-anime-slide-right.txt-anime-visible span {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Animation 5: Fade in with blur */
+.txt-anime-blur-in span {
+    transform: translateY(0);
+    filter: blur(10px);
+}
+
+.txt-anime-blur-in.txt-anime-visible span {
+    opacity: 1;
+    filter: blur(0);
+}
+
+/* Animation 6: Fade in with scale up */
+.txt-anime-scale-up span {
+    transform: scale(0.8);
+}
+
+.txt-anime-scale-up.txt-anime-visible span {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Animation 7: Fade in with scale down */
+.txt-anime-scale-down span {
+    transform: scale(1.2);
+}
+
+.txt-anime-scale-down.txt-anime-visible span {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Animation 8: Fade in with rotate */
+.txt-anime-rotate span {
+    transform: rotate(-15deg);
+}
+
+.txt-anime-rotate.txt-anime-visible span {
+    opacity: 1;
+    transform: rotate(0deg);
+}
+
+/* Animation 9: Fade in with clipping (overflow hidden effect) */
+.txt-anime-clip span {
+    position: relative;
+    display: inline-block;
+    transform: translateY(30px);
+    clip-path: inset(0 50%);
+}
+
+.txt-anime-clip.txt-anime-visible span {
+    opacity: 1;
+    transform: translateY(0);
+    clip-path: inset(0 0);
+}
+
+/* Animation 10: Fade in from center with blur */
+.txt-anime-center-blur span {
+    transform: scale(0.8);
+    filter: blur(10px);
+}
+
+.txt-anime-center-blur.txt-anime-visible span {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+}
+
+/* NEW: Fade in with 3D rotation */
+.txt-anime-rotate-3d span {
+    transform: rotateY(90deg);
+}
+
+.txt-anime-rotate-3d.txt-anime-visible span {
+    opacity: 1;
+    transform: rotateY(0);
+}
+
+/* NEW: Fade in with jump */
+.txt-anime-jump span {
+    transform: translateY(90px);
+}
+
+.txt-anime-jump.txt-anime-visible span {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* NEW: Fade in with stretch */
+.txt-anime-stretch span {
+    transform: scaleX(0.3);
+}
+
+.txt-anime-stretch.txt-anime-visible span {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+/* NEW: Fade in with color shift */
+.txt-anime-color-shift span {
+    color: red;
+}
+
+.txt-anime-color-shift.txt-anime-visible span {
+    opacity: 1;
+    color: #000000; /* Changer la couleur de rouge à noir */
+}
+
+/* NEW: Fade in with diagonal slide */
+.txt-anime-diagonal span {
+    transform: translate(-20px, 20px);
+}
+
+.txt-anime-diagonal.txt-anime-visible span {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+/* NEW: Fade in with diagonal slide - Haut-Gauche */
+.txt-anime-diagonal-top-left span {
+    transform: translate(-20px, -20px);
+}
+
+.txt-anime-diagonal-top-left.txt-anime-visible span {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* NEW: Fade in with diagonal slide - Haut-Droite */
+.txt-anime-diagonal-top-right span {
+    transform: translate(20px, -20px);
+}
+
+.txt-anime-diagonal-top-right.txt-anime-visible span {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* NEW: Fade in with diagonal slide - Bas-Gauche */
+.txt-anime-diagonal-bottom-left span {
+    transform: translate(-20px, 20px);
+}
+
+.txt-anime-diagonal-bottom-left.txt-anime-visible span {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* NEW: Fade in with diagonal slide - Bas-Droite */
+.txt-anime-diagonal-bottom-right span {
+    transform: translate(20px, 20px);
+}
+
+.txt-anime-diagonal-bottom-right.txt-anime-visible span {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+/* NEW: Fade in with skew */
+.txt-anime-skew span {
+    transform: skewX(-20deg);
+}
+
+.txt-anime-skew.txt-anime-visible span {
+    opacity: 1;
+    transform: skewX(0);
+}
+
+/* NEW: Fade in with zoom */
+.txt-anime-zoom span {
+    transform: scale(0.5);
+}
+
+.txt-anime-zoom.txt-anime-visible span {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* NEW: Fade in with flip */
+.txt-anime-flip span {
+    transform: rotateX(90deg);
+}
+
+.txt-anime-flip.txt-anime-visible span {
+    opacity: 1;
+    transform: rotateX(0);
+}
+
+/* NEW: Fade in with shake */
+.txt-anime-shake span {
+    transform: translateX(-10px);
+}
+
+.txt-anime-shake.txt-anime-visible span {
+    opacity: 1;
+    animation: shakeEffect 0.7s ease forwards;
+}
+
+@keyframes shakeEffect {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25%, 75% {
+        transform: translateX(-10px);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+}
+
+/* NEW: Fade in with blur and scale */
+.txt-anime-blur-scale span {
+    transform: scale(0.8);
+    filter: blur(10px);
+}
+
+.txt-anime-blur-scale.txt-anime-visible span {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+}
+
+/* NEW: Fade in with slide and rotate */
+.txt-anime-slide-rotate span {
+    transform: translateX(-30px) rotate(-10deg);
+}
+
+.txt-anime-slide-rotate.txt-anime-visible span {
+    opacity: 1;
+    transform: translateX(0) rotate(0);
+}
+/* NEW: Fade in with tilt */
+.txt-anime-tilt span {
+    transform: rotate(-10deg) scale(0.9);
+}
+
+.txt-anime-tilt.txt-anime-visible span {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+}
+
+/* NEW: Fade in with compress */
+.txt-anime-compress span {
+    transform: scaleY(0.5);
+}
+
+.txt-anime-compress.txt-anime-visible span {
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+/* NEW: Fade in with swing */
+.txt-anime-swing span {
+    transform: rotate(15deg);
+}
+
+.txt-anime-swing.txt-anime-visible span {
+    opacity: 1;
+    animation: swingEffect 0.7s ease-in-out forwards;
+}
+
+@keyframes swingEffect {
+    0% {
+        transform: rotate(15deg);
+    }
+    50% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* NEW: Fade in with unfold */
+.txt-anime-unfold span {
+    transform: scaleY(0);
+    transform-origin: top;
+}
+
+.txt-anime-unfold.txt-anime-visible span {
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+/* NEW: Fade in with roll */
+.txt-anime-roll span {
+    transform: translateX(-70%) rotate(-30deg);
+}
+
+.txt-anime-roll.txt-anime-visible span {
+    opacity: 1;
+    transform: translateX(0) rotate(0);
+}
+
+/* NEW: Fade in with fold */
+.txt-anime-fold span {
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.txt-anime-fold.txt-anime-visible span {
+    opacity: 1;
+    transform: scaleX(1);
+}
