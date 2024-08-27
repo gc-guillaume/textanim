@@ -11,13 +11,18 @@
 - **31** elegant and fluid text animations, ready to run on any website.
 - **3** simple classes to learn: `split`, `repeat`, and `delay`.
 - **1kb** of Vanilla JS.
-- **5kb** of CSS, making it lightweight and fast.
+- **4kb** of CSS for animations, making it lightweight and fast.
 
 ## How to Use
 
 ### Option 1: Use a CDN (Recommended)
 
 This is the easiest way to get started with `textAnim.js`. Simply copy and paste the required lines into your HTML file, add your first class to a text element, and watch the magic happen!
+
+`<link rel="stylesheet" href="https://cdn.statically.io/gh/gc-guillaume/textanim/master/animations.min.css">`
+
+`<script src="https://cdn.statically.io/gh/gc-guillaume/textanim/master/animations.min.js"></script>`
+
 
 ### Option 2: Download and Customize
 
