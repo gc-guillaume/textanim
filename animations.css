@@ -8,10 +8,10 @@
     justify-content: flex-start;
     transition: all .45s cubic-bezier(.75,0,0,.75);
 }
-.txt-center {
+.txt-align-center {
     justify-content: center;
 }
-.txt-right {
+.txt-align-right {
     justify-content: flex-end;
 }
 /* Basic setup for hidden overflow and transitions */
