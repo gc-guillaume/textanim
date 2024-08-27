@@ -36,6 +36,7 @@ Once `textAnim.js` is installed, you can use the following classes on any HTML t
 |----------------------------|-------------|----------------------------------------------------------------------------------------------|-----------------------------------------------------------|
 | `txt-anime-{animation}`     | Required    | This class triggers the scroll animation. Choose from 31 different animations in the demo.   | `<p class="txt-anime-slide-up">Example</p>`               |
 | `txt-delay-{milliseconds}`  | Optional    | Adds an animation delay in milliseconds. Useful for sequential animations.                   | `<p class="txt-anime-slide-up txt-delay-400">This text will appear after 400ms</p>` |
+| `txt-align-{center, right}` | Optional    | This class lets you align animated text to center or right. By default and without specification, text is left-aligned.                   | `<p class="txt-anim-slide-up txt-align-right">This text will be right-aligned.</p>` |
 | `txt-split`                 | Optional    | Animates text letter by letter, wrapping each letter in a span to avoid line break issues.   | `<p class="txt-anime-slide-up txt-split">This text will appear letter by letter!</p>` |
 | `txt-repeat`                | Optional    | Repeats the animation each time the text is visible in the viewport.                         | `<p class="txt-anime-slide-up txt-repeat">This text will animate every time it comes into view.</p>` |
 
