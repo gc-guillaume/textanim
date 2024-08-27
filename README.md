@@ -19,9 +19,9 @@
 
 This is the easiest way to get started with `textAnim.js`. Simply copy and paste the required lines into your HTML file, add your first class to a text element, and watch the magic happen!
 
-`<link rel="stylesheet" href="https://cdn.statically.io/gh/gc-guillaume/textanim/master/animations.min.css">`
+`<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/gc-guillaume/textanim/animations.min.css">`
 
-`<script src="https://cdn.statically.io/gh/gc-guillaume/textanim/master/animations.min.js"></script>`
+`<script src="hhttps://cdn.jsdelivr.net/gh/gc-guillaume/textanim/animations.min.js"></script>`
 
 
 ### Option 2: Download and Customize
