@@ -21,7 +21,7 @@ This is the easiest way to get started with `textAnim.js`. Simply copy and paste
 
 `<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/gc-guillaume/textanim/animations.min.css">`
 
-`<script src="hhttps://cdn.jsdelivr.net/gh/gc-guillaume/textanim/animations.min.js"></script>`
+`<script src="https://cdn.jsdelivr.net/gh/gc-guillaume/textanim/animations.min.js"></script>`
 
 
 ### Option 2: Download and Customize
