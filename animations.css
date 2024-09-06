@@ -1,258 +1,273 @@
 /** animations **/
 
-[class^="txt-anim"] {
+[class*="textanim"] {
     display: flex;
     column-gap: .25em;
     row-gap: 0;
     flex-wrap: wrap;
     justify-content: flex-start;
-    transition: all .45s cubic-bezier(.75,0,0,.75);
+    transition: all .8s .1s cubic-bezier(.04,.79,.04,1)
 }
-.txt-align-center {
+.textalign-center {
     justify-content: center;
 }
-.txt-align-right {
+.textalign-right {
     justify-content: flex-end;
 }
 /* Basic setup for hidden overflow and transitions */
-[class^="txt-anim-"] span {
+[class*="textanim-"] * {
     opacity: 0;
     overflow: hidden;
     transform-origin: center;
-    transition: all .45s cubic-bezier(.75,0,0,.75);
+    transition: all .8s .1s cubic-bezier(.04,.79,.04,1);
+    
 }
+[class*="textanim-"]:not([class*="split"]) span * {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: .25em;
+    }
+[class*="split"] > span{
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+[class*="split"] *{
+display: inline-flex;
+align-items: center;
+    }
+
 
 /* Animation 1: Fade in and slide up */
-.txt-anim-slide-up span {
-    transform: translateY(30px);
+[class*="textanim-slide-up"] * {
+    transform: translateY(40px);
 }
 
-.txt-anim-slide-up.txt-anim-visible span {
+[class*="textanim-slide-up"][class*="visible"] * {
     opacity: 1;
     transform: translateY(0);
 }
 
 /* Animation 2: Fade in and slide down */
-.txt-anim-slide-down span {
-    transform: translateY(-30px);
+[class*="textanim-slide-down"] * {
+    transform: translateY(-40px);
 }
 
-.txt-anim-slide-down.txt-anim-visible span {
+[class*="textanim-slide-down"][class*="visible"] * {
     opacity: 1;
     transform: translateY(0);
 }
 
 /* Animation 3: Fade in and slide left */
-.txt-anim-slide-left span {
-    transform: translateX(30px);
+[class*="textanim-slide-left"] * {
+    transform: translateX(40px);
 }
 
-.txt-anim-slide-left.txt-anim-visible span {
+[class*="textanim-slide-left"][class*="visible"] * {
     opacity: 1;
     transform: translateX(0);
 }
 
 /* Animation 4: Fade in and slide right */
-.txt-anim-slide-right span {
-    transform: translateX(-30px);
+[class*="textanim-slide-right"] * {
+    transform: translateX(-40px);
 }
 
-.txt-anim-slide-right.txt-anim-visible span {
+[class*="textanim-slide-right"][class*="visible"] * {
     opacity: 1;
     transform: translateX(0);
 }
 
 /* Animation 5: Fade in with blur */
-.txt-anim-blur-in span {
+[class*="textanim-blur-in"] * {
     transform: translateY(0);
     filter: blur(10px);
 }
 
-.txt-anim-blur-in.txt-anim-visible span {
+[class*="textanim-blur-in"][class*="visible"] * {
     opacity: 1;
     filter: blur(0);
 }
 
 /* Animation 6: Fade in with scale up */
-.txt-anim-scale-up span {
+[class*="textanim-scale-up"] * {
     transform: scale(0.8);
 }
 
-.txt-anim-scale-up.txt-anim-visible span {
+[class*="textanim-scale-up"][class*="visible"] * {
     opacity: 1;
     transform: scale(1);
 }
 
 /* Animation 7: Fade in with scale down */
-.txt-anim-scale-down span {
+[class*="textanim-scale-down"] * {
     transform: scale(1.2);
 }
 
-.txt-anim-scale-down.txt-anim-visible span {
+[class*="textanim-scale-down"][class*="visible"] * {
     opacity: 1;
     transform: scale(1);
 }
 
 /* Animation 8: Fade in with rotate */
-.txt-anim-rotate span {
+[class*="textanim-rotate"] * {
     transform: rotate(-15deg);
 }
 
-.txt-anim-rotate.txt-anim-visible span {
+[class*="textanim-rotate"][class*="visible"] * {
     opacity: 1;
     transform: rotate(0deg);
 }
 
 /* Animation 9: Fade in with clipping (overflow hidden effect) */
-.txt-anim-clip span {
+[class*="textanim-clip"] * {
     position: relative;
     display: inline-block;
-    transform: translateY(30px);
+    transform: translateY(40px);
     clip-path: inset(0 50%);
 }
 
-.txt-anim-clip.txt-anim-visible span {
+[class*="textanim-clip"][class*="visible"] * {
     opacity: 1;
     transform: translateY(0);
     clip-path: inset(0 0);
 }
 
 /* Animation 10: Fade in from center with blur */
-.txt-anim-center-blur span {
+[class*="textanim-center-blur"] * {
     transform: scale(0.8);
     filter: blur(10px);
 }
 
-.txt-anim-center-blur.txt-anim-visible span {
+[class*="textanim-center-blur"][class*="visible"] * {
     opacity: 1;
     transform: scale(1);
     filter: blur(0);
 }
 
 /* NEW: Fade in with 3D rotation */
-.txt-anim-rotate-3d span {
+[class*="textanim-rotate-3d"] * {
     transform: rotateY(90deg);
 }
 
-.txt-anim-rotate-3d.txt-anim-visible span {
+[class*="textanim-rotate-3d"][class*="visible"] * {
     opacity: 1;
     transform: rotateY(0);
 }
 
 /* NEW: Fade in with jump */
-.txt-anim-jump span {
+[class*="textanim-jump"] * {
     transform: translateY(90px);
 }
 
-.txt-anim-jump.txt-anim-visible span {
+[class*="textanim-jump"][class*="visible"] * {
     opacity: 1;
     transform: translateY(0);
 }
 
 /* NEW: Fade in with stretch */
-.txt-anim-stretch span {
+[class*="textanim-stretch"] * {
     transform: scaleX(0.3);
 }
 
-.txt-anim-stretch.txt-anim-visible span {
+[class*="textanim-stretch"][class*="visible"] * {
     opacity: 1;
     transform: scaleX(1);
 }
 
 /* NEW: Fade in with color shift */
-.txt-anim-color-shift span {
+[class*="textanim-color-shift"] * {
     color: red;
 }
 
-.txt-anim-color-shift.txt-anim-visible span {
+[class*="textanim-color-shift"][class*="visible"] * {
     opacity: 1;
     color: #000000; /* Changer la couleur de rouge à noir */
 }
 
 /* NEW: Fade in with diagonal slide */
-.txt-anim-diagonal span {
+[class*="textanim-diagonal"] * {
     transform: translate(-20px, 20px);
 }
 
-.txt-anim-diagonal.txt-anim-visible span {
+[class*="textanim-diagonal"][class*="visible"] * {
     opacity: 1;
     transform: translate(0, 0);
 }
 /* NEW: Fade in with diagonal slide - Haut-Gauche */
-.txt-anim-diagonal-top-left span {
+[class*="textanim-diagonal-top-left"] * {
     transform: translate(-20px, -20px);
 }
 
-.txt-anim-diagonal-top-left.txt-anim-visible span {
+[class*="textanim-diagonal-top-left"][class*="visible"] * {
     opacity: 1;
     transform: translate(0, 0);
 }
 
 /* NEW: Fade in with diagonal slide - Haut-Droite */
-.txt-anim-diagonal-top-right span {
+[class*="textanim-diagonal-top-right"] * {
     transform: translate(20px, -20px);
 }
 
-.txt-anim-diagonal-top-right.txt-anim-visible span {
+[class*="textanim-diagonal-top-right"][class*="visible"] * {
     opacity: 1;
     transform: translate(0, 0);
 }
 
 /* NEW: Fade in with diagonal slide - Bas-Gauche */
-.txt-anim-diagonal-bottom-left span {
+[class*="textanim-diagonal-bottom-left"] * {
     transform: translate(-20px, 20px);
 }
 
-.txt-anim-diagonal-bottom-left.txt-anim-visible span {
+[class*="textanim-diagonal-bottom-left"][class*="visible"] * {
     opacity: 1;
     transform: translate(0, 0);
 }
 
 /* NEW: Fade in with diagonal slide - Bas-Droite */
-.txt-anim-diagonal-bottom-right span {
+[class*="textanim-diagonal-bottom-right"] * {
     transform: translate(20px, 20px);
 }
 
-.txt-anim-diagonal-bottom-right.txt-anim-visible span {
+[class*="textanim-diagonal-bottom-right"][class*="visible"] * {
     opacity: 1;
     transform: translate(0, 0);
 }
 /* NEW: Fade in with skew */
-.txt-anim-skew span {
+[class*="textanim-skew"] * {
     transform: skewX(-20deg);
 }
 
-.txt-anim-skew.txt-anim-visible span {
+[class*="textanim-skew"][class*="visible"] * {
     opacity: 1;
     transform: skewX(0);
 }
 
 /* NEW: Fade in with zoom */
-.txt-anim-zoom span {
+[class*="textanim-zoom"] * {
     transform: scale(0.5);
 }
 
-.txt-anim-zoom.txt-anim-visible span {
+[class*="textanim-zoom"][class*="visible"] * {
     opacity: 1;
     transform: scale(1);
 }
 
 /* NEW: Fade in with flip */
-.txt-anim-flip span {
+[class*="textanim-flip"] * {
     transform: rotateX(90deg);
 }
 
-.txt-anim-flip.txt-anim-visible span {
+[class*="textanim-flip"][class*="visible"] * {
     opacity: 1;
     transform: rotateX(0);
 }
 
 /* NEW: Fade in with shake */
-.txt-anim-shake span {
+[class*="textanim-shake"] * {
     transform: translateX(-10px);
 }
 
-.txt-anim-shake.txt-anim-visible span {
+[class*="textanim-shake"][class*="visible"] * {
     opacity: 1;
     animation: shakeEffect 0.7s ease forwards;
 }
@@ -270,52 +285,52 @@
 }
 
 /* NEW: Fade in with blur and scale */
-.txt-anim-blur-scale span {
+[class*="textanim-blur-scale"] * {
     transform: scale(0.8);
     filter: blur(10px);
 }
 
-.txt-anim-blur-scale.txt-anim-visible span {
+[class*="textanim-blur-scale"][class*="visible"] * {
     opacity: 1;
     transform: scale(1);
     filter: blur(0);
 }
 
 /* NEW: Fade in with slide and rotate */
-.txt-anim-slide-rotate span {
-    transform: translateX(-30px) rotate(-10deg);
+[class*="textanim-slide-rotate"] * {
+    transform: translateX(-40px) rotate(-10deg);
 }
 
-.txt-anim-slide-rotate.txt-anim-visible span {
+[class*="textanim-slide-rotate"][class*="visible"] * {
     opacity: 1;
     transform: translateX(0) rotate(0);
 }
 /* NEW: Fade in with tilt */
-.txt-anim-tilt span {
+[class*="textanim-tilt"] * {
     transform: rotate(-10deg) scale(0.9);
 }
 
-.txt-anim-tilt.txt-anim-visible span {
+[class*="textanim-tilt"][class*="visible"] * {
     opacity: 1;
     transform: rotate(0deg) scale(1);
 }
 
 /* NEW: Fade in with compress */
-.txt-anim-compress span {
+[class*="textanim-compress"] * {
     transform: scaleY(0.5);
 }
 
-.txt-anim-compress.txt-anim-visible span {
+[class*="textanim-compress"][class*="visible"] * {
     opacity: 1;
     transform: scaleY(1);
 }
 
 /* NEW: Fade in with swing */
-.txt-anim-swing span {
+[class*="textanim-swing"] * {
     transform: rotate(15deg);
 }
 
-.txt-anim-swing.txt-anim-visible span {
+[class*="textanim-swing"][class*="visible"] * {
     opacity: 1;
     animation: swingEffect 0.7s ease-in-out forwards;
 }
@@ -333,33 +348,38 @@
 }
 
 /* NEW: Fade in with unfold */
-.txt-anim-unfold span {
+[class*="textanim-unfold"] * {
     transform: scaleY(0);
     transform-origin: top;
 }
 
-.txt-anim-unfold.txt-anim-visible span {
+[class*="textanim-unfold"][class*="visible"] * {
     opacity: 1;
     transform: scaleY(1);
 }
 
 /* NEW: Fade in with roll */
-.txt-anim-roll span {
+[class*="textanim-roll"] * {
     transform: translateX(-70%) rotate(-30deg);
 }
 
-.txt-anim-roll.txt-anim-visible span {
+[class*="textanim-roll"][class*="visible"] * {
     opacity: 1;
     transform: translateX(0) rotate(0);
 }
 
 /* NEW: Fade in with fold */
-.txt-anim-fold span {
+[class*="textanim-fold"] * {
     transform: scaleX(0);
     transform-origin: left;
 }
 
-.txt-anim-fold.txt-anim-visible span {
+[class*="textanim-fold"][class*="visible"] * {
     opacity: 1;
     transform: scaleX(1);
+}
+@media all and (max-width:768px) {
+    html body *:not(header):has([class*="textanim"]) {
+            contain: paint;
+        }
 }

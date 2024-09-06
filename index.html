@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang=en>
+<head>
+<meta charset=UTF-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>textAnim.js - Dumb, lightweight & class based text animations.</title>
+<meta name=title content="textAnim.js - Dumb, lightweight & class based text animations.">
+<meta name=description content="textAnim.js is a minimalistic JavaScript library designed to add elegant text animations to your website. With just 2kb of vanilla JS and 5kb of CSS.">
+<meta name=keywords content="textanimjs,textanim.js,textanim js,textanime,textanimejs,text animation,js,css">
+<meta name=robots content="index, follow">
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=language content=English>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel=stylesheet href=animations.css?ver=1.2>
+<link rel=stylesheet href=style.css?ver1.0>
+<link href=https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css rel=stylesheet />
+<script src=https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js></script>
+</head>
+<body>
+<header>
+<div>
+<div>
+<h1 class="textanim-slide-up-300"><b>textAnim</b>.js</h1>
+</div>
+<nav>
+<ul>
+<li><a href=#why>Why it's cool</a></li>
+<li><a href=#how>How to use</a></li>
+<li><a href=#doc>Doc</a></li>
+<li><a target=_blank href=textanim_demo.html>Demo</a></li>
+<li><a href=mailto:contact@guillaumecoulin.com>Contact</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<section class=hero>
+<section style="max-width:1180px;padding:0 24px">
+<h2 class="textanim-slide-up-300">
+Tired of old cheesy text animations? <i style=color:blue>Same.</i>
+</h2>
+<p style="font-size:32px" class="textanim-clip-790">Discover <i>textAnim.js</i>, an elegant plug-and-play, class based and lightweight library: <u>2kb js, 5kb css.</u></p>
+<div class="cta" style="margin-bottom:32px;display:flex;flex-wrap:wrap;gap:16px">
+<button class="primary copyCdn">Copy and include CDNs</button>
+<a target=_blank href=https://github.com/gc-guillaume/textanim class="secondary button">Download on github</a>
+</div>
+</section>
+</section>
+<section class=light id=why>
+<div class=parentbloc>
+<div class=bloc>
+<h2 class="textanim-tilt-200">31</h2>
+<p>elegant and fluid text animations, ready to run on any website.</p>
+<a href=textanim_demo.html target=_blank class="button secondary">Look at the demo</a>
+<video autoplay playsinline muted loop><source src=waves.mp4 type=video/mp4></video>
+</div>
+<div class=blocwrap>
+<div class=bloc>
+<h2 class="textanim-tilt-300">4</h2>
+<p>classes to learn - split, repeat delay and align. Yep, that's a few.</p>
+</div>
+<div class=childbloc>
+<div class=bloc>
+<h2 class="textanim-tilt-350">2<small>kb</small></h2>
+<p>of Vanilla Js.</p>
+</div>
+<div class=bloc>
+<h2 class="textanim-tilt-400">5<small>kb</small></h2>
+<p>of CSS. Fast as heck!</p>
+</div>
+</div>
+</div>
+</div>
+<div style=padding-top:48px>
+<h2 class="textanim-diagonal-top-right textdelay-400">
+Animate word by word...
+</h2>
+<h2 class="textanim-clip-400-split" style="color:blue;text-align: right;">...or letter by letter.
+</h2>
+<div class="parentbloc middle" id=how style="padding-bottom:64px;">
+<div class=bloc>
+<div>
+<img src=cdn.svg alt="textAnim Js - CDN" title="cdn"/>
+<h3 class="textanim-tilt-200">Use a CDN</h3>
+<p><small>recommanded</small></p>
+</div>
+<p class="">Easiest way to dive in. Copy and paste two lines of code into your file, add your first class to your text and see the magic happen.</p>
+<span class=pre>
+<code class=language-html>
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/gc-guillaume/textanim/animations.min.css&quot;&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/gh/gc-guillaume/textanim/animations.min.js&quot;&gt;&lt;/script&gt;
+</code>
+</span>
+</div>
+<div class=bloc>
+<div><img src=zip.svg alt="textAnim Js - GitHub" title="git"/>
+<h3 class="textanim-tilt-200">Download a zip</h3>
+</div>
+<p>Get the source code and play with the demo file included. Create your own css animations or modify the functions at your convenience.</p>
+<a target=_blank href=https://github.com/gc-guillaume/textanim class="secondary button small">Download on github</a>
+</div>
+</div>
+</div>
+<div id=doc style=padding-top:64px>
+<h2 class=textanim-slide-right-200>Configuration</h2>
+<p>Once <i style=color:blue>textAnim.js</i> is set on your document, you can pass the following class with three optional <b>and combinable</b>  parameters : delay (in ms), split and repeat. Yep, it's just that easy.</p>
+<p class=textanim-slide-up></p>
+<table class=responsive-table>
+<thead>
+<tr>
+<th style=width:25%>Class</th>
+<th style=width:15%>Requirement</th>
+<th style=width:30%>Description</th>
+<th style=width:30%>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label=Class>textanim-<i>{animation}</i></td>
+<td data-label=Requirement>Required</td>
+<td data-label=Description>This element triggers the scroll animation. You can choose from 31 different animations in the demo. <a target=_blank href=./demo.html><u>Help yourself!</u></td>
+<td data-label=Code><i>&lt;p class=&quot;textanim-slide-up&quot;&gt;<span class="normal">Exemple</span>&lt;/p&gt;</i></td>
+</tr>
+<tr>
+<td data-label="Class">textanim-<i>animation</i><i style="color:blue">-{value in milliseconds}</i></td>
+<td data-label=Requirement>Optional <b class="info">must be placed right after {animation} if used</b></td>
+<td data-label=Description>Adds an animation delay in milliseconds. Useful for sequential animations.   </td>
+<td data-label=Code><i>&lt;p class=&quot;textanim-slide-up-400&quot;&gt;<span class="normal">This text will appear after 400ms</span>&lt;/p&gt;</i></td>
+</tr>
+<tr>
+<td data-label="Class">textanim-<i>animation</i><i style="color:blue">-split</i>
+<td data-label=Requirement>Optional</td>
+<td data-label=Description>Animates text letter by letter, wrapping each letter in a span to avoid line break issues.</td>
+<td data-label=Code><i>&lt;p class=&quot;textanim-slide-up-400-split&quot;&gt;<span class="normal">This text will appear letter by letter!</span>&lt;/p&gt;</i></td>
+</tr>
+<tr>
+<td data-label="Class">textanim-<i>animation</i><i style="color:blue">-repeat</i>
+<td data-label=Requirement>Optional</td>
+<td data-label=Description>Repeats the animation each time the text is visible in the viewport.</td>
+<td data-label=Code><i>&lt;p class=&quot;textanim-slide-up-400-split-repeat&quot;&gt;<span class="normal">This text will animate every time it comes into view</span>.&lt;/p&gt;</i></td>
+</tr>
+<tr>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<script src=animations.min.js></script>
+<script src=class.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js></script>
+<script>SmoothScroll({stepSize:120,animationTime:450,accelerationDelta:10,accelerationMax:3,pulseAlgorithm:!0,pulseScale:7,pulseNormalize:1,touchpadSupport:!0,fixedBackground:!0})</script>
+<script>document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll('td[data-label="Code"]').forEach(t=>{const o=document.createElement("span");o.classList.add("copy");o.innerText=" Copy";t.appendChild(o);o.addEventListener("click",function(){var e=t.querySelector("i").textContent;navigator.clipboard.writeText(e).then(()=>{o.classList.remove("copy");o.classList.add("copied");o.innerText=" Copied!";setTimeout(()=>{o.classList.remove("copied");o.classList.add("copy");o.innerText=" Copy";},1000);}).catch(e=>{console.error("Erreur lors de la copie : ",e);});});});document.querySelectorAll(".pre").forEach(preElement=>{const copyButton=document.createElement("span");copyButton.classList.add("copy");copyButton.innerText=" Copy";preElement.appendChild(copyButton);copyButton.addEventListener("click",function(){let contentToCopy="";preElement.querySelectorAll("code").forEach(codeElement=>{contentToCopy+=codeElement.textContent+"\n";});navigator.clipboard.writeText(contentToCopy.trim()).then(()=>{copyButton.classList.remove("copy");copyButton.classList.add("copied");copyButton.innerText=" Copied!";setTimeout(()=>{copyButton.classList.remove("copied");copyButton.classList.add("copy");copyButton.innerText=" Copy";},1000);}).catch(error=>{console.error("Erreur lors de la copie : ",error);});});});document.querySelector('.copyCdn').addEventListener('click',function(){const o=this;const firstCopyButton=document.querySelector(".pre .copy");if(firstCopyButton){firstCopyButton.click();const originalText=o.innerText;o.innerText="Ready to paste!";setTimeout(()=>{o.innerText=originalText;},1000);}});});</script>
+<script>document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll('a[target="_blank"]').forEach(link=>{const img=document.createElement("img");img.src="link.svg";img.alt="External link";img.style.marginLeft="5px";link.parentNode.insertBefore(img,link.nextSibling);});});</script>
+<!--<script>document.addEventListener("DOMContentLoaded",function(){setTimeout(function(){const h1Element=document.querySelector('h1');if(h1Element){setInterval(function(){h1Element.classList.remove('textanim-visible');setTimeout(function(){h1Element.classList.add('textanim-visible');},1000);},7000);}},2000);});</script>!-->
+</body>
+ <footer>
+    <div>
+    <div>
+    <p><b>Copyright (c) 2024</b> Guillaume Coulin</p>
+    <p>💪<i>This project is licensed under the MIT License. Feel free to use it on your commercial projects!</i></p>
+</div>
+<div>
+    <a target="_blank" href=https://guillaumecoulin.com>My (old) portfolio</a>
+    <a target="_blank" href=https://www.linkedin.com/in/gcoulin/>Let's connect on LinkedIn</a>
+    <a href=mailto:contact@guillaumecoulin.com>Email me?</a>
+    </div>
+</div>
+  </footer>
+</html>
