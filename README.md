@@ -9,7 +9,7 @@
 ## Why It's Cool
 
 - **31** elegant and fluid text animations, ready to run on any website.
-- **4** simple classes to learn: `split`, `repeat`, `align` and `delay`.
+- **3** simple classes to learn: `split`, `repeat`, and `delay`.
 - **2kb** of Vanilla JS.
 - **4kb** of CSS for animations, making it lightweight and fast.
 
